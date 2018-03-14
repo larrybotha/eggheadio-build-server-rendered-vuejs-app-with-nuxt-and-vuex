@@ -1,2 +1,22 @@
-# Build a Server Rendered Vue.js App with Nuxt and Vuex
-Learning and annotations from https://egghead.io/courses/build-a-server-rendered-vue-js-app-with-nuxt-and-vuex
+# eggheadio-build-server-rendered-vuejs-app-with-nuxt-and-vuex
+
+> Nuxt.js project
+
+## Build Setup
+
+``` bash
+# install dependencies
+$ npm install # Or yarn install
+
+# serve with hot reload at localhost:3000
+$ npm run dev
+
+# build for production and launch server
+$ npm run build
+$ npm start
+
+# generate static project
+$ npm run generate
+```
+
+For detailed explanation on how things work, checkout the [Nuxt.js docs](https://github.com/nuxt/nuxt.js).
