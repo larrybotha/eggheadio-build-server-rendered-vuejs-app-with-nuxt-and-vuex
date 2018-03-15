@@ -1,6 +1,11 @@
 <template>
-  <div>Hello world</div>
+  <div>{{counter}}</div>
 </template>
+
+<script>
+// get mapState, which looks like the analagous to redux's mapStateToProps
+import {mapState} from 'vuex';
+
 // we export computed values here
 export default {
   computed: {
@@ -12,3 +17,4 @@ export default {
     }),
   }
 }
+</script>
