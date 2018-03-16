@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="pa4">
     <!--
     we can dispatch mutations using vue directives referencing the names we
     define in the methods property
