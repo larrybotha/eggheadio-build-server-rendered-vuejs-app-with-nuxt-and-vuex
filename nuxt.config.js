@@ -16,8 +16,13 @@ module.exports = {
   */
   loading: {color: '#3B8070'},
   /*
-  ** Build configuration
+   * with Nuxt we add css via the config, referencing local and installed files
+   * like so:
   */
+  css: ['~assets/css/main.css', 'tachyons/css/tachyons.css'],
+  /*
+   ** Build configuration
+   */
   build: {
     /*
     ** Run ESLint on save
