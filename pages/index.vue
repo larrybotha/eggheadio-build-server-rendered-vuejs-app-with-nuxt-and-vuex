@@ -10,8 +10,8 @@
 
       We're opting for the shorter version here:
     -->
-    <li v-for="todo of todos" :key="todo.task" class="ph3 pv3 bb b--light-silver">
-      {{todo.task}}
+    <li v-for="todo of todos" :key="todo.id" class="ph3 pv3 bb b--light-silver">
+      {{todo.text}}
     </li>
   </ul>
 </article>
@@ -19,13 +19,22 @@
 
 <script>
 import {mapState, mapMutations} from 'vuex';
+import axios from 'axios';
 
 export default {
+  // fetch is invoked when the page is loaded. What about naming collision with
+  // browser's fetch api?
+  // Fetch is also called with a property of store - is this vuex's doing?
+  async fetch({store}) {
+    // make an async request
+    const res = await axios('https://todos-irfedqgncn.now.sh/todos');
+
+    // once we have a response, commit that response to our store
+    store.commit('init', res.data);
+  },
+
   computed: {
     ...mapState({
-      // Get the todos from our store
-      // We could call them anything here, as long as inside the function we are
-      // referencing the actual state property
       todos(state) {
         return state.todos;
       },
