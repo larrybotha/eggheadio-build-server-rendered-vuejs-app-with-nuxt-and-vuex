@@ -1,13 +1,20 @@
 <template>
-  <div class="pa4">
+<article class="pa3 pa5-ns">
+  <h1 class="f4 bold center mw6">Todos</h1>
+  <ul class="list pl0 ml0 center mw6 ba b--light-silver br2">
     <!--
-    we can dispatch mutations using vue directives referencing the names we
-    define in the methods property
+      In view one can either use v-bind:[name], or as a convenience just :[name]
+      for bindings:
+
+      <li v-for="todo of todos" :key="todo.task" class="ph3 pv3 bb b--light-silver">
+
+      We're opting for the shorter version here:
     -->
-    <button @click="dec">-</button>
-    {{counter}}
-    <button @click="inc">+</button>
-  </div>
+    <li v-for="todo of todos" :key="todo.task" class="ph3 pv3 bb b--light-silver">
+      {{todo.task}}
+    </li>
+  </ul>
+</article>
 </template>
 
 <script>
