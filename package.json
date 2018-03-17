@@ -10,9 +10,11 @@
     "start": "nuxt start",
     "generate": "nuxt generate",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
-    "precommit": "npm run lint"
+    "precommit": "npm run lint",
+    "api": "now --public johnlindquist/todos-api"
   },
   "dependencies": {
+    "axios": "^0.18.0",
     "nuxt": "^1.0.0",
     "tachyons": "^4.9.1"
   },
@@ -21,6 +23,7 @@
     "eslint": "^4.15.0",
     "eslint-friendly-formatter": "^3.0.0",
     "eslint-loader": "^1.7.1",
-    "eslint-plugin-vue": "^4.0.0"
+    "eslint-plugin-vue": "^4.0.0",
+    "now": "^10.2.1"
   }
 }
