@@ -29,10 +29,10 @@ export default {
     // console.log(this);
     /**/
     try {
+      /**
+      // investigate fetch from server vs client
       const res = await new Promise(resolve => {
         setTimeout(async () => {
-          // investigate fetch from server vs client
-          /**
           return resolve({
             data: [
               {
@@ -44,13 +44,13 @@ export default {
               },
             ],
           });
-        /**/
-
-          const response = await axios('https://odos-irfedqgncn.now.sh/todos');
-
-          return resolve(response);
         }, 0);
       });
+
+      return resolve(response);
+      /**/
+
+      const res = await axios('https://todos-irfedqgncn.now.sh/todos');
 
       store.commit('init', res.data);
     } catch (err) {
@@ -63,7 +63,7 @@ export default {
 
       // or, one can use the default error page found at layout/error.vue, along
       // with the 'error' param available to this 'fetch' function
-      error({statusCode: 500, message: 'Oops, try again'});
+      error({statusCode: 500, message: 'Oops, you did something badong'});
     }
     /**/
   },
