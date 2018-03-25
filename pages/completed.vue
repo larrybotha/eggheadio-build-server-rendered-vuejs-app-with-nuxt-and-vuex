@@ -1,10 +1,5 @@
 <template>
   <div>
-    <nav>
-      <nuxt-link to="/">home</nuxt-link>
-      <nuxt-link to="/completed">completed</nuxt-link>
-    </nav>
-
     <article class="pa3 pa5-ns">
       <h1 class="f4 bold center mw6">Completed Todos</h1>
       <ul class="list pl0 ml0 center mw6 ba b--light-silver br2">
