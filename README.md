@@ -4,5 +4,5 @@ Learning and annotations from https://egghead.io/courses/build-a-server-rendered
 
 Lessons are represented by branches.
 
-Didn't complete this course - not really interested in Nuxt working with it in
+Didn't complete this course - not really interested in Nuxt after working with it in
 this course.
